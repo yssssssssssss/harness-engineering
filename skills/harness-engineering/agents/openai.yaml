@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Engineering"
+  short_description: "Build an agent-first engineering harness"
+  default_prompt: "Use $harness-engineering to make this repo agent-first with docs, guardrails, and CI checks."
