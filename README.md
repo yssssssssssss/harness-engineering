@@ -29,7 +29,32 @@
 4. 持续清理  
 把“文档过期、规则失效、流程膨胀”当成常规维护项，持续减复杂度。
 
-## 3. 使用流程（推荐）
+## 3. 3 分钟快速上手
+
+如果你只想先跑起来，直接执行下面 4 步：
+
+1. 进入目标项目根目录，并放入技能目录（确保存在 `skills/harness-engineering/`）。
+2. 初始化 Harness：
+
+```bash
+bash skills/harness-engineering/scripts/bootstrap_harness.sh . --with-github-ci
+```
+
+3. 运行严格审计：
+
+```bash
+bash skills/harness-engineering/scripts/harness_audit.sh . --strict
+```
+
+4. 把占位检查替换成真实检查（至少改 `scripts/check.sh`），然后提交到仓库。
+
+常用触发方式（在支持技能调用的环境）：
+
+```text
+Use $harness-engineering to make this repo agent-first with docs, guardrails, and CI checks.
+```
+
+## 4. 使用流程（推荐）
 
 ### 步骤 1：引入技能目录
 
@@ -81,7 +106,7 @@ bash skills/harness-engineering/scripts/harness_audit.sh . --strict
 - 每个迭代周期清理一次 backlog 和过期规则
 - 规则“无 owner / 无检查 / 无收益”则删除
 
-## 4. 目录结构
+## 5. 目录结构
 
 ```text
 harness-engineering/
@@ -99,13 +124,13 @@ harness-engineering/
             └── harness-templates.md
 ```
 
-## 5. 适用场景
+## 6. 适用场景
 
 建议在以下场景使用：
 - 新仓库从 0 到 1 建立 Agent-First 开发约束
 - 老仓库补齐工程规范、架构边界、CI 守门
 - 多团队并行开发时统一“智能体可读”的协作标准
 
-## 6. 一句话实践建议
+## 7. 一句话实践建议
 
 先把规则写短、写清、写进仓库，再把规则变成可执行检查；先保证可运行，再逐步收紧门禁。
