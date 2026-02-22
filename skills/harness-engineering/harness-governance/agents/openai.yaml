@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Governance"
+  short_description: "Run recurring harness maintenance loops"
+  default_prompt: "Use $harness-governance to prune stale harness rules, maintain decision logs, and set recurring quality loops."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Audit"
+  short_description: "Score harness maturity and gaps"
+  default_prompt: "Use $harness-audit to run strict harness checks, summarize failures, and propose minimal fixes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Init"
+  short_description: "Bootstrap agent-first repo foundations"
+  default_prompt: "Use $harness-init to scaffold AGENTS.md, docs/harness, and starter harness CI files in this repository."
